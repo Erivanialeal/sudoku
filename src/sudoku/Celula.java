@@ -23,12 +23,12 @@ public class Celula {
         }
     }
 
-    public boolean isFixar() {
+    public boolean isFixa() {
         return fixa;
     }
 
-    public void setFixar(boolean fixar) {
-        this.fixa = fixar;
+    public void setFixa(boolean fixa) {
+        this.fixa = fixa;
     }
 
     // Método que limpa o valor da célula, se ela não for fixa
