@@ -1,7 +1,7 @@
 package sudoku;
 
 public class Celula {
-    // criando os atributos privados para encapsulamento
+    // criando os atributos privados encapsulamento
     private int valor;
     private boolean fixa;
 
