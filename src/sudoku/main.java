@@ -40,6 +40,24 @@ public class Main {
                     System.out.println("Informe o número que voçê quer adicionar de 0 a 8:");
                     int valor = scanner.nextInt();
                     jogo.colocarNumero(linha, coluna, valor);
+                    jogo.getTabuleiro().exibir();
+                    break;
+
+                case 4: // remover número
+                    System.out.println(" Informe a linha de 0 a 8:");
+                    int linhaRemover = scanner.nextInt(); // linha
+
+                    System.out.println("Informe a coluna de 0 a 8:");
+                    int colunaRemover = scanner.nextInt(); // coluna
+                    jogo.removerNumero(colunaRemover, linhaRemover);
+                    jogo.getTabuleiro().exibir();
+
+                case 5: // verificar jogo
+                    System.out.println("Verificando jogo...");
+                    jogo.verificarJogo();
+
+                    break;
+                case 6: // retornar status do jogo
 
                 default:
                     break;

@@ -19,6 +19,7 @@ public class Tabuleiro {
             { 0, 0, 0, 0, 8, 0, 0, 7, 9 }
     };
 
+    // construtor para fixar os numeros diferentes de 0
     public Tabuleiro() {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
@@ -53,17 +54,23 @@ public class Tabuleiro {
     }
 
     public void exibir() {
+        // pecorre cada linha do tabuleiro
+        // imprime uma linha divisoria horizontal
         for (int i = 0; i < 9; i++) {
             if (i % 3 == 0 && i != 0) {
                 System.out.println("------+-------+------");
             }
+            // pecorre cada coluna da linha atual
             for (int j = 0; j < 9; j++) {
                 if (j % 3 == 0 && j != 0) {
+                    // imprime um separador vertical
                     System.out.print("| ");
                 }
+                // obtem o valor da celula atual
                 int valor = matriz[i][j].getValor();
                 System.out.print(valor == 0 ? ". " : valor + " ");
             }
+            // pula para a proxima linha apos imprimir cada coluna
             System.out.println();
         }
     }
