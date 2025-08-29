@@ -58,6 +58,11 @@ public class Main {
 
                     break;
                 case 6: // retornar status do jogo
+                    jogo.verificarStatusDoJogo();
+                    break;
+                case 7: // limpar jogo
+                    jogo.limpar();
+                    break;
 
                 default:
                     break;

@@ -54,6 +54,7 @@ public class Tabuleiro {
     }
 
     public void exibir() {
+
         // pecorre cada linha do tabuleiro
         // imprime uma linha divisoria horizontal
         for (int i = 0; i < 9; i++) {

@@ -18,9 +18,11 @@ de Celula.
 
 ## Métodos.
 * inicializar():
+
     Recebe um array de Strings no formato "x,y,valor", onde cada elemento representa uma célula fixa do Sudoku. O método percorre esse array, interpreta as posições e valores, e preenche o tabuleiro com os números iniciais do jogo. Esses valores são marcados como fixos, ou seja, não podem ser alterados pelo jogador durante a partida.
 
 * exibir()
+
     Exibe o tabuleiro de Sudoku no terminal, organizando visualmente os números em uma grade 9x9. O método insere divisões horizontais e verticais para destacar os blocos 3x3, facilitando a leitura e a identificação de cada região do jogo. Células vazias são representadas por um ponto (.), enquanto as preenchidas mostram seus respectivos valores.
 
 * colocarNumero
