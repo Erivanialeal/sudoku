@@ -89,12 +89,16 @@ public class Jogo {
         } else {
             int valorRemovido = celula.getValor();// pega o valor antes de apagar
             celula.limpar(); // limapando o numero da celula
-            System.out.println("O Valor: " + valorRemovido + " foi apagado com sucesso");
+            System.out.println("Número removido com sucesso da célula [" + x + "][" + y + "]");
         }
 
     }
 
     public void verificarJogo() {
+        if (status.equals("NAO INICIADO")) {
+            System.out.println("Você precisa iniciar um novo jogo primeiro!");
+            return;
+        }
         // mostrar tabuleiro
         tabuleiro.exibir();
         // se tabuleiro estiver com erros
@@ -112,6 +116,10 @@ public class Jogo {
     }
 
     public void verificarStatusDoJogo() {
+        if (status.equals("NAO INICIADO")) {
+            System.out.println("Você precisa iniciar um novo jogo primeiro!");
+            return;
+        }
         boolean completo = tabuleiro.estaCompleto(); // tabuleiro esta completo?
         boolean erros = tabuleiro.contemErros(); // há erros?
         // Se tabuleiro está completo e não contem erros
@@ -150,9 +158,9 @@ public class Jogo {
         boolean confirmar = pedirConfirmação();
         if (confirmar) {
             tabuleiro.limpar();
+            System.out.println("Jogo limpo com sucesso");
             // atualizar o status
             status = "NAO INICIADO";
-            System.out.println("Jogo inicializado com sucesso!");
         } else {
             System.out.println("O jogo continua normalmente");
         }

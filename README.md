@@ -1,5 +1,6 @@
 # 88888888888
 Um desafio para praticar POO, esse desafio faz parte do BootCamp da GFT da plataforma DIO.
+Nesse desafio usei o Java puro apenas praticando com a linguagem.
 
 ## Descrição do projeto.
 > O projeto Sudoku em Java tem como objetivo implementar o jogo clássico de Sudoku no terminal. O jogador poderá iniciar um novo jogo, inserir números, remover números, visualizar o tabuleiro, verificar o status do jogo e finalizar a partida quando estiver correta.
@@ -25,9 +26,27 @@ de Celula.
 
     Exibe o tabuleiro de Sudoku no terminal, organizando visualmente os números em uma grade 9x9. O método insere divisões horizontais e verticais para destacar os blocos 3x3, facilitando a leitura e a identificação de cada região do jogo. Células vazias são representadas por um ponto (.), enquanto as preenchidas mostram seus respectivos valores.
 
-* colocarNumero
-* removerNumero
+* colocarNumero()
+
+    Este método insere um número em uma célula específica do tabuleiro de Sudoku. ele 
+    também garante que o jogador só possa modificar valores não fixos do tabuleiro.
+
+* removerNumero()
+
+    Aqui segue a mesma lógica, porém invés de colocar número ele vai remover o número.
+
 * limpar()
+    Pecorre cada linha e coluna, verifica os números que são fixos se forem fixos não podem
+    ser alterados se não forem fixos a celula é limpa.
+
 * estaCompleto()
+
+    Esse métado verifica se o tabuleiro está completo, pecorrendo linhas e colunas
+    verificando os valores que são fixos e os que não são e fazendo a alteração em números
+    não fixos.
+
 * contemErros()
+
+    Verificação de erros, de linhas, colunas, quadrados 3x3 e tabuleiro 9x9, usamos o HashSet para não permitir números duplicados.
+    
 * getCelula

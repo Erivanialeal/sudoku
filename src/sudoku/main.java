@@ -49,7 +49,7 @@ public class Main {
 
                     System.out.println("Informe a coluna de 0 a 8:");
                     int colunaRemover = scanner.nextInt(); // coluna
-                    jogo.removerNumero(colunaRemover, linhaRemover);
+                    jogo.removerNumero(linhaRemover, colunaRemover);
                     jogo.getTabuleiro().exibir();
 
                 case 5: // verificar jogo
@@ -63,6 +63,8 @@ public class Main {
                 case 7: // limpar jogo
                     jogo.limpar();
                     break;
+                case 8:
+                    jogo.finalizarJogo();
 
                 default:
                     break;

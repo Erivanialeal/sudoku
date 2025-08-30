@@ -95,6 +95,7 @@ public class Tabuleiro {
     }
 
     public void limpar() {
+        // pecorre linhas (i) e colunas (j) do tabuleiro 9x9
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 // verificar se a celula não é fixa
@@ -124,7 +125,7 @@ public class Tabuleiro {
     public boolean contemErros() {
         // verificando erros em linhas
         for (int i = 0; i < 9; i++) {
-            // criando o set vazio
+            // criando o set vazio, o HasSet não permite os números duplicados.
             Set<Integer> linha = new HashSet<>();
             // coluna
             for (int j = 0; j < 9; j++) {
@@ -168,6 +169,11 @@ public class Tabuleiro {
         return false;
     }
 
+    // Retorna a célula localizada na posição (x, y) da matriz do tabuleiro.
+    // Esse método permite acessar diretamente uma célula específica para leitura ou
+    // modificação.
+    // Útil para verificar se a célula é fixa, obter seu valor ou aplicar
+    // alterações.
     public Celula getCelula(int x, int y) {
         return matriz[x][y];
     }
