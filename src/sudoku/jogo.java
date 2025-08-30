@@ -9,6 +9,10 @@ public class Jogo {
     private String status;
 
     // construtor
+    // Inicializa um novo tabuleiro vazio e define o status inicial do jogo como
+    // "NÃO INICIADO".
+    // Isso garante que o jogador só possa interagir com o jogo após iniciar
+    // oficialmente uma partida.
     public Jogo() {
         this.tabuleiro = new Tabuleiro();
         this.status = "NAO INICIADO";
@@ -30,6 +34,7 @@ public class Jogo {
         this.status = status;
     }
 
+    // métados
     public String novoJogo(String[] args) {
         if (status != null && !status.equals("NAO INICIADO")) {
             System.out.println("Já existe um jogo em andamento ou finalizado. Reinicie para começar outro.");
@@ -140,7 +145,7 @@ public class Jogo {
         }
     }
 
-    public boolean pedirConfirmação() {
+    public boolean pedirComfirmacao() {
         Scanner scanner = new Scanner(System.in);
         // pedir a confirmação
         System.out.println("DESEJA EXCLUIR O JOGO Sim ou Não?");
@@ -155,7 +160,7 @@ public class Jogo {
             System.out.println("O jogo já foi ganho deseja mesmo reniciar");
         }
         // pedir a confirmação da limpeza do jogo
-        boolean confirmar = pedirConfirmação();
+        boolean confirmar = pedirComfirmacao();
         if (confirmar) {
             tabuleiro.limpar();
             System.out.println("Jogo limpo com sucesso");
@@ -169,7 +174,7 @@ public class Jogo {
     public void finalizarJogo() {
         // perguntar ao jogador se quer mesmo finalizar.
         System.out.println("Deseja realmente finalizar esse jogo?");
-        boolean confirmar = pedirConfirmação();
+        boolean confirmar = pedirComfirmacao();
         if (!confirmar) {
             System.out.println("O jogo continua normalmente");
             return;
@@ -178,7 +183,7 @@ public class Jogo {
         // verificar se o jogo está completo?
         if (!tabuleiro.estaCompleto() || tabuleiro.contemErros()) {
             System.out.println("O jogo não está completo ou contém erros. Tem certeza que deseja finalizar");
-            confirmar = pedirConfirmação();
+            confirmar = pedirComfirmacao();
             if (!confirmar) {
                 System.out.println("O jogo continua normalmente");
                 return;
